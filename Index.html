@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC-Offload: The Hybrid Compute Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            line-height: 1;
+            color: #0077B6;
+        }
+    </style>
+</head>
+<body class="bg-[#F0F8FF] text-[#03045E]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#0077B6] mb-2">PC-Offload</h1>
+            <p class="text-xl md:text-2xl font-semibold text-[#00B4D8]">The Smart Strategy for Hybrid Compute Augmentation</p>
+        </header>
+
+        <main>
+            <section id="challenge" class="mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+                        <h2 class="text-2xl font-bold mb-4 text-[#0077B6]">The Challenge: Aging Hardware</h2>
+                        <p class="text-lg mb-6">Critical workloads like data analysis, engineering simulations, and AI inference are pushing legacy PCs to their limits, forcing costly and disruptive hardware refresh cycles.</p>
+                        <div class="bg-[#CAF0F8] rounded-lg p-6">
+                            <span class="text-6xl md:text-8xl font-black text-[#0077B6]">3+</span>
+                            <p class="text-xl font-bold text-[#03045E]">Years of Extended PC Lifespan</p>
+                            <p class="text-sm mt-2">PC-Offload allows organizations to defer hardware refreshes by augmenting existing devices with on-demand cloud power.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h2 class="text-2xl font-bold mb-4 text-center text-[#0077B6]">The Opportunity: Surgical Enhancement</h2>
+                        <p class="text-lg">Instead of replacing functional hardware, PC-Offload provides a targeted performance boost. It transparently runs only the most demanding applications on powerful remote servers, while everyday tasks remain on the local PC for a seamless, low-latency experience.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="what-it-is" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">What is PC-Offload? (And What It's Not)</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-center">PC-Offload: The Hybrid Model</h3>
+                        <p class="text-center mb-6">PC-Offload creates a hybrid environment where processing is intelligently distributed.</p>
+                        <div class="flex flex-col items-center space-y-4">
+                            <div class="bg-[#E0F7FA] border-2 border-[#90E0EF] rounded-lg p-4 w-full max-w-sm text-center">
+                                <span class="text-2xl">💻</span>
+                                <h4 class="font-bold">Your Physical PC</h4>
+                                <p>Handles OS & most applications (Office, browser, etc.)</p>
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flex justify-around w-full max-w-md">
+                                <div class="text-center">
+                                    <p class="font-semibold">Local Execution</p>
+                                    <div class="flow-arrow">↘</div>
+                                    <div class="bg-green-100 border-2 border-green-300 rounded-lg p-2 mt-2">
+                                        <p>Standard Apps</p>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <p class="font-semibold">Remote Execution</p>
+                                    <div class="flow-arrow">↙</div>
+                                    <div class="bg-blue-100 border-2 border-blue-300 rounded-lg p-2 mt-2">
+                                        <p>Heavy Apps (CAD, AI)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-center">PC-Offload vs. VDI/DaaS</h3>
+                        <p class="text-center mb-6">It's crucial to distinguish PC-Offload from full desktop virtualization.</p>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-[#00B4D8] text-white">
+                                        <th class="p-3 font-bold rounded-tl-lg">Feature</th>
+                                        <th class="p-3 font-bold">VDI / DaaS</th>
+                                        <th class="p-3 font-bold rounded-tr-lg">PC-Offload</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-[#90E0EF]">
+                                        <td class="p-3 font-semibold">Core Paradigm</td>
+                                        <td class="p-3">Full Desktop Replacement</td>
+                                        <td class="p-3">Selective Performance Augmentation</td>
+                                    </tr>
+                                    <tr class="border-b border-[#90E0EF]">
+                                        <td class="p-3 font-semibold">Execution Location</td>
+                                        <td class="p-3">100% Remote</td>
+                                        <td class="p-3">Hybrid (Heavy apps remote)</td>
+                                    </tr>
+                                    <tr class="border-b border-[#90E0EF]">
+                                        <td class="p-3 font-semibold">Resource Model</td>
+                                        <td class="p-3">All-or-Nothing</td>
+                                        <td class="p-3">On-Demand Augmentation</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-3 font-semibold">Primary Use Case</td>
+                                        <td class="p-3">Standardized Desktops, BYOD</td>
+                                        <td class="p-3">Extend PC life, run high-end software</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="architecture" class="mb-16 bg-white rounded-2xl shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">How It Works: The Architectural Flow</h2>
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0 md:space-x-8">
+                    <div class="text-center flex flex-col items-center">
+                        <div class="bg-[#CAF0F8] rounded-full w-32 h-32 flex items-center justify-center text-5xl shadow-md mb-2">💻</div>
+                        <h3 class="font-bold">1. User Click</h3>
+                        <p class="max-w-xs">User launches a designated heavy application on their physical PC.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                    <div class="text-center flex flex-col items-center">
+                        <div class="bg-[#CAF0F8] rounded-full w-32 h-32 flex items-center justify-center text-5xl shadow-md mb-2">📡</div>
+                        <h3 class="font-bold">2. Agent Intercepts</h3>
+                        <p class="max-w-xs">A lightweight client agent intercepts the request and contacts the broker.</p>
+                    </div>
+                    <div class="flow-arrow hidden md:block">→</div>
+                    <div class="flow-arrow md:hidden">↓</div>
+                    <div class="text-center flex flex-col items-center">
+                        <div class="bg-[#CAF0F8] rounded-full w-32 h-32 flex items-center justify-center text-5xl shadow-md mb-2">🧠</div>
+                        <h3 class="font-bold">3. Broker Orchestrates</h3>
+                        <p class="max-w-xs">The connection broker finds an available, powerful VM in the cloud pool.</p>
+                    </div>
+                     <div class="flow-arrow hidden md:block">→</div>
+                     <div class="flow-arrow md:hidden">↓</div>
+                    <div class="text-center flex flex-col items-center">
+                        <div class="bg-[#CAF0F8] rounded-full w-32 h-32 flex items-center justify-center text-5xl shadow-md mb-2">☁️</div>
+                        <h3 class="font-bold">4. Remote Execution</h3>
+                        <p class="max-w-xs">The application runs on the cloud VM, with its UI streamed back to the user's screen.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="platforms" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Choosing Your Platform</h2>
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <p class="text-center mb-6">PC-Offload is enabled by mature platforms. The right choice depends on your existing infrastructure and strategic goals.</p>
+                    <div class="chart-container">
+                        <canvas id="platformChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="decisions" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">Key Implementation Decision: Resource Pooling</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-4">Dedicated Single-Session VMs</h3>
+                        <p class="mb-4">Each user gets their own VM. This offers the best performance and security isolation but comes at a higher cost.</p>
+                        <div class="chart-container h-64 max-h-64">
+                            <canvas id="dedicatedVmChart"></canvas>
+                        </div>
+                        <p class="mt-4 font-semibold">Ideal for: High-performance CAD, sensitive data processing.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+                        <h3 class="text-2xl font-bold mb-4">Shared Multi-Session VMs</h3>
+                        <p class="mb-4">Multiple users share a single, powerful VM. This is highly cost-effective but performance can be variable.</p>
+                         <div class="chart-container h-64 max-h-64">
+                            <canvas id="sharedVmChart"></canvas>
+                        </div>
+                        <p class="mt-4 font-semibold">Ideal for: General-purpose applications, large user bases.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="use-cases" class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#0077B6]">High-Impact Use Cases</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-6xl mb-4">⚙️</div>
+                        <h3 class="text-xl font-bold mb-2">High-Performance Engineering</h3>
+                        <p>Deliver GPU-intensive CAD, CAE, and 3D modeling software to standard PCs, eliminating the need for expensive physical workstations.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-6xl mb-4">🏛️</div>
+                        <h3 class="text-xl font-bold mb-2">Legacy Application Support</h3>
+                        <p>Extend the life of mission-critical legacy apps by running them in a compatible remote environment and streaming them to modern desktops.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="text-6xl mb-4">🔒</div>
+                        <h3 class="text-xl font-bold mb-2">Secure Financial Services</h3>
+                        <p>Keep sensitive data and applications confined to the secure data center. Only an encrypted UI stream reaches the endpoint, ensuring compliance.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="text-center mt-12 pt-8 border-t-2 border-[#90E0EF]">
+            <h2 class="text-2xl font-bold text-[#0077B6]">The Future is Hybrid</h2>
+            <p class="max-w-3xl mx-auto mt-2">PC-Offload is a practical, achievable strategy for IT modernization. It bridges the gap between existing hardware and modern software demands, creating a more agile, secure, and cost-effective computing ecosystem.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brilliantBlues = {
+            primary: '#0077B6',
+            secondary: '#00B4D8',
+            accent: '#90E0EF',
+            background: '#CAF0F8',
+            text: '#03045E',
+            green: '#2a9d8f',
+            yellow: '#e9c46a',
+            orange: '#f4a261',
+            red: '#e76f51'
+        };
+
+        const wrapLabel = (label, maxWidth = 16) => {
+            if (typeof label !== 'string' || label.length <= maxWidth) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const platformData = {
+            labels: ['Citrix', 'VMware', 'Microsoft AVD', 'Huawei Cloud Stack'].map(label => wrapLabel(label)),
+            datasets: [
+                {
+                    label: 'Flexibility',
+                    data: [9, 8.5, 7, 5],
+                    backgroundColor: brilliantBlues.secondary,
+                    borderColor: brilliantBlues.primary,
+                    borderWidth: 1
+                },
+                {
+                    label: 'Cost-Effectiveness',
+                    data: [7, 6.5, 9, 6],
+                    backgroundColor: brilliantBlues.accent,
+                    borderColor: brilliantBlues.primary,
+                    borderWidth: 1
+                },
+                {
+                    label: 'Management Simplicity',
+                    data: [7.5, 7, 9.5, 7],
+                    backgroundColor: brilliantBlues.background,
+                    borderColor: brilliantBlues.primary,
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        new Chart(document.getElementById('platformChart'), {
+            type: 'bar',
+            data: platformData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: {
+                            display: true,
+                            text: 'Relative Score (out of 10)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Platform Comparison for PC-Offload',
+                        font: { size: 16 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const dedicatedVmData = {
+            labels: ['High Performance', 'High Cost'],
+            datasets: [{
+                data: [70, 30],
+                backgroundColor: [brilliantBlues.green, brilliantBlues.red],
+                hoverOffset: 4
+            }]
+        };
+
+        new Chart(document.getElementById('dedicatedVmChart'), {
+            type: 'doughnut',
+            data: dedicatedVmData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Guaranteed QoS'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const sharedVmData = {
+            labels: ['High Cost-Efficiency', 'Variable Performance'],
+            datasets: [{
+                data: [80, 20],
+                backgroundColor: [brilliantBlues.primary, brilliantBlues.orange],
+                hoverOffset: 4
+            }]
+        };
+
+        new Chart(document.getElementById('sharedVmChart'), {
+            type: 'doughnut',
+            data: sharedVmData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Max User Density'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
